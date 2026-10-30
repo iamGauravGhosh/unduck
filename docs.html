@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Browse and search Unduck's bang shortcuts." />
+  <title>Bang documentation · Unduck</title>
+  <style>
+    :root{font-family:Inter,system-ui,sans-serif;color-scheme:light dark}
+    body{max-width:960px;margin:0 auto;padding:32px 20px;line-height:1.6}
+    nav{display:flex;justify-content:space-between;align-items:center;gap:12px}
+    a{color:inherit}h1{font-size:clamp(2rem,5vw,3rem);margin-bottom:8px}
+    .muted{opacity:.75}.examples{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0}
+    code{background:color-mix(in srgb,currentColor 9%,transparent);padding:4px 7px;border-radius:6px}
+    input{width:100%;box-sizing:border-box;padding:14px 16px;font:inherit;border:1px solid #8888;border-radius:10px;background:transparent;color:inherit}
+    table{border-collapse:collapse;width:100%;margin-top:18px;text-align:left}
+    th,td{padding:12px 8px;border-bottom:1px solid #8884;overflow-wrap:anywhere}
+    th{font-size:.85rem}.empty{padding:24px 0}.count{margin-top:14px}
+    @media(max-width:600px){th:nth-child(3),td:nth-child(3){display:none}}
+  </style>
+</head>
+<body>
+  <nav><strong>Unduck</strong><a href="/">← Back to search</a></nav>
+  <main>
+    <h1>Bang shortcuts</h1>
+    <p class="muted">Search directly on other websites by adding a <code>!bang</code> to your query. Without a bang, Unduck uses Google.</p>
+    <div class="examples">
+      <span><code>!gh vite</code> → GitHub</span>
+      <span><code>!yt music</code> → YouTube</span>
+      <span><code>!w typescript</code> → Wikipedia</span>
+    </div>
+    <h2>Find a bang</h2>
+    <label for="filter">Search by shortcut, website, or URL</label>
+    <input id="filter" type="search" placeholder="Try gh, youtube, wikipedia…" autocomplete="off" />
+    <p id="count" class="count muted" aria-live="polite"></p>
+    <table><thead><tr><th>Bang</th><th>Website</th><th>Search URL</th></tr></thead><tbody id="results"></tbody></table>
+    <p id="empty" class="empty" hidden>No matching bangs found.</p>
+    <p class="muted">The directory uses the same bang data as Unduck. Bang shortcuts are provided by their respective websites and may change.</p>
+  </main>
+  <script type="module" src="/src/docs.ts"></script>
+</body>
+</html>
