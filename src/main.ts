@@ -24,6 +24,8 @@ function noSearchDefaultPageRender() {
       <footer class="footer">
         <a href="https://gauravghosh.me" target="_blank" rel="noopener noreferrer">Gaurav Ghosh</a>
         •
+        <a href="https://x.com/iamgauravghosh" target="_blank" rel="noopener noreferrer">twitter</a>
+        •
         <a href="https://github.com/iamGauravGhosh/unduck" target="_blank">github</a>
       </footer>
     </div>
