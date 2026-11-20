@@ -78,6 +78,14 @@ function getBangredirectUrl() {
   );
   if (!searchUrl) return null;
 
+  // Default Google searches and !g should open the Web tab instead of All,
+  // avoiding AI Overviews without changing any other bang destinations.
+  if (selectedBang?.t === "g") {
+    const googleUrl = new URL(searchUrl);
+    googleUrl.searchParams.set("udm", "14");
+    return googleUrl.toString();
+  }
+
   return searchUrl;
 }
 
