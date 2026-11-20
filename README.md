@@ -13,7 +13,7 @@ Add a custom search engine with this URL:
 https://search.gauravghosh.me/?q=%s
 ```
 
-Search normally to use Google, or add a bang to search another website:
+Search normally to open Google's **Web** results tab (without AI Overviews), or add a bang to search another website. Google searches, including `!g`, use the `udm=14` URL parameter. Other bangs are unaffected:
 
 | Search | Destination |
 | --- | --- |
